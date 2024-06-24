@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaChatSIgnalR.App", "PruebaChatSIgnalR.App\PruebaChatSIgnalR.App.csproj", "{94FC4E73-DFD2-4CF3-9FF6-A109DF4BF8C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "DB\DB.csproj", "{0DBE05AB-F222-4192-ABB5-5C1456D1DC98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94FC4E73-DFD2-4CF3-9FF6-A109DF4BF8C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94FC4E73-DFD2-4CF3-9FF6-A109DF4BF8C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94FC4E73-DFD2-4CF3-9FF6-A109DF4BF8C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94FC4E73-DFD2-4CF3-9FF6-A109DF4BF8C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DBE05AB-F222-4192-ABB5-5C1456D1DC98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DBE05AB-F222-4192-ABB5-5C1456D1DC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DBE05AB-F222-4192-ABB5-5C1456D1DC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DBE05AB-F222-4192-ABB5-5C1456D1DC98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E43BEE2B-0861-4691-B46A-1EBC3EF1CAA2}
+	EndGlobalSection
+EndGlobal

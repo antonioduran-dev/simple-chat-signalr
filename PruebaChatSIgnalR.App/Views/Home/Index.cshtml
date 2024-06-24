@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Chat";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.0/signalr.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl("/chatHub")
+                .build();
+
+            connection.on("ReceiveMessage", function (user, message, timestamp) {
+                const msg = document.createElement("div");
+                msg.textContent = `${user}: ${message} (${new Date(timestamp).toLocaleTimeString()})`;
+                document.getElementById("messagesList").appendChild(msg);
+            });
+
+            connection.start().catch(function (err) {
+                return console.error(err.toString());
+            });
+
+            document.getElementById("sendButton").addEventListener("click", function (event) {
+                const user = document.getElementById("userInput").value;
+                const message = document.getElementById("messageInput").value;
+                connection.invoke("SendMessage", user, message).catch(function (err) {
+                    return console.error(err.toString());
+                });
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" id="userInput" placeholder="Nombre de usuario" />
+        <input type="text" id="messageInput" placeholder="Mensaje" />
+        <button id="sendButton">Enviar</button>
+    </div>
+    <div id="messagesList"></div>
+</body>
+</html>
